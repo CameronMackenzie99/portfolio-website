@@ -3,8 +3,7 @@ My website (WIP) is a place to show my portfolio of projects made during my jour
 
 ## Tech Stack
 ### Current
-- React
-- Tailwind CSS
+<img align="center" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" /> <img align="center" src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" />
 ### Planned
 - Next.js (for server-sided rendering, SEO)
 - Express/node.js backend with MongoDB (for authentication and data storage for take-home pay calculator)
