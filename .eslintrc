@@ -8,15 +8,20 @@
         "endOfLine": "auto"
       }
     ],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "global-require": 0,
+    "react/prop-types": "off" // TODO: look into this
   },
 
   "overrides": [
     {
-        "files": "*.test.js",
-        "rules": {
-          "no-unused-expressions": "off"
-        }
+      "files": "*.test.js",
+      "rules": {
+        "no-unused-expressions": "off"
+      }
     }
-  ]
+  ],
+  "env": {
+    "es6": true
+  }
 }

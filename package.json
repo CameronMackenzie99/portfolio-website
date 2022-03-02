@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tailwindcss/forms": "^0.4.0",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -10,6 +11,8 @@
     "postcss": "^8.4.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "tailwindcss": "^3.0.19",
     "web-vitals": "^2.1.4"
@@ -23,7 +26,6 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
   },
-  
   "browserslist": {
     "production": [
       ">0.2%",

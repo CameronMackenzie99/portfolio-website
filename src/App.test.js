@@ -1,14 +1,23 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import App from './App'
+import {
+  screen,
+  fireEvent,
+  waitFor,
+  cleanup,
+  render,
+} from '@testing-library/react'
+
+import { TakeHomePayCalculator } from './pages/projects/take-home-pay-calculator'
+
+afterEach(cleanup)
 
 test('does not render result box on page load', () => {
-  render(<App />)
+  render(<TakeHomePayCalculator />)
   const calcResult = screen.queryByText('Could not fetch data...')
   expect(calcResult).toBeNull()
 })
 
 test('renders result box on submit', async () => {
-  render(<App />)
+  render(<TakeHomePayCalculator />)
   // no error element on page load
   expect(
     screen.queryByText('Could not fetch data...'),
