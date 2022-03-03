@@ -12,14 +12,18 @@ function StoreActiveLink({ children, to }) {
   const match = location.pathname === to
 
   return (
-    <div
-      className={
-        match
+    <Link to={to}>
+      <div
+        className={
+          match
             ? 'p-2 border-b-2 border-emerald-500 text-slate-900 dark:text-white font-bold'
             : 'p-2 text-slate-800 dark:text-slate-200 hover:transition-all hover:duration-100 hover:text-white hover:bg-slate-600/50 rounded-xl'
-      <Link to={to}>{children}</Link>
-      {match}
-    </div>
+        }
+      >
+        {children}
+        {match}
+      </div>
+    </Link>
   )
 }
 export function Nav() {
