@@ -130,7 +130,7 @@ function CalculatorForm({ handleSubmit }) {
           </select>
           <input
             type="submit"
-            className="border border-white/5 rounded-md px-2 py-1 shadow-lg mt-1 inline-block bg-slate-300/50 dark:bg-slate-600/75 text-emerald-500 text-bold font-sans hover:ring-1 hover:ring-emerald-500"
+            className="border border-white/5 rounded-md px-2 py-1 shadow-lg mt-1 inline-block bg-emerald-500/75 dark:bg-slate-600/75 font-bold hover:-translate-y-1 transition ease-in-out hover:ring-1 hover:ring-emerald-500"
             data-testid="submit-button"
           />
         </div>

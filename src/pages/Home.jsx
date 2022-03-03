@@ -10,8 +10,7 @@ export function Home() {
             Hi, I&apos;m Cameron Mackenzie, an aspiring software developer.
           </p>
           <div className="flex items-center justify-center">
-            <span className="bg-slate-300/50 dark:bg-slate-600/75 motion-safe:hover:-translate-y-1 transition ease-in-out p-4 rounded-xl shadow-md font-bold text-2xl text-emerald-500">
-              <a href={CV} target="_blank">
+              <span className="bg-emerald-500/75 dark:bg-slate-600/75 motion-safe:hover:-translate-y-1 transition ease-in-out p-4 rounded-xl shadow-md font-bold text-2xl dark:text-emerald-500">
                 See my CV
               </a>
             </span>

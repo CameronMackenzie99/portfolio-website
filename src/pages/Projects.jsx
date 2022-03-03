@@ -33,36 +33,39 @@ export function Projects() {
                 dockerised and deployed on AWS.
               </p>
             </div>
-            <div className="flex items-center justify-center gap-x-12 py-2 text-emerald-500">
-              <button
-                type="button"
-                className="bg-slate-200/50 dark:bg-slate-700 shadow-md p-1 rounded-md w-24 hover:ring-1 hover:ring-emerald-500 font-bold hover:-translate-y-1 transition ease-in-out"
+            <div className="flex items-center justify-center gap-x-12 py-2">
+              <LinkButton
+                label="See Details"
                 onClick={() => navigate('take-home-pay-calculator-details')}
-              >
-                See details
-              </button>
-              <button
-                type="button"
-                className="bg-slate-200/50 dark:bg-slate-700 shadow-md p-1 rounded-md w-24 hover:ring-1 hover:ring-emerald-500 font-bold hover:-translate-y-1 transition ease-in-out"
+              />
+              <LinkButton
+                label="Live Demo"
                 onClick={() => navigate('take-home-pay-calculator')}
-              >
-                Live Demo
-              </button>
-              <button
-                type="button"
-                className="bg-slate-200/50 dark:bg-slate-700 shadow-md p-1 rounded-md w-24 hover:ring-1 hover:ring-emerald-500 font-bold hover:-translate-y-1 transition ease-in-out"
+              />
+              <LinkButton
+                label="Github"
                 onClick={() =>
                   window.open(
                     'https://github.com/CameronMackenzie99/take-home-pay-calculator',
                   )
                 }
-              >
-                Github
-              </button>
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
+  )
+}
+
+function LinkButton({ label, onClick }) {
+  return (
+    <button
+      type="button"
+      className="bg-emerald-500/75 dark:bg-slate-700/75 shadow-md px-1 py-2 rounded-md w-24 hover:ring-1 hover:ring-emerald-500 font-bold hover:-translate-y-1 transition ease-in-out"
+      onClick={onClick}
+    >
+      {label}
+    </button>
   )
 }
