@@ -31,10 +31,12 @@ export function Nav() {
     <div>
       <nav className="font-sans text-md">
         <div className="flex justify-between max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <div className="flex grid grid-rows-2 w-16 text-2xl text-slate-900 dark:text-white font-bold font-mono items-center justify-center text-center tracking-widest ml-2">
-            <h2 className="grid-rows-1">Cameron</h2>
-            <h2 className="grid-rows-1">Mackenzie</h2>
-          </div>
+          <Link to="/">
+            <div className="flex grid grid-rows-2 w-16 text-2xl text-slate-900 dark:text-white font-bold font-mono items-center justify-center text-center tracking-widest ml-2">
+              <h2 className="grid-rows-1">Cameron</h2>
+              <h2 className="grid-rows-1">Mackenzie</h2>
+            </div>
+          </Link>
           <div className="flex justify-center items-center">
             <div className="hidden md:block">
               <div className="flex items-baseline space-x-4 text-lg">
