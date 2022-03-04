@@ -18,5 +18,5 @@ Dynamic webpage for querying [take-home-pay-calculator](https://github.com/Camer
 - [x] Light/Dark mode
 - [ ] Implement contact form
 - [ ] Implement transitions for dynamically rendered elements
-- [ ] Deploy to live site
+- [x] Deploy to live site
 - [ ] Search engine optimisation
