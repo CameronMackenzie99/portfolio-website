@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export function Calculator() {
-  const restEndpoint = 'http://127.0.0.1:80'
+  const restEndpoint = process.env.REACT_APP_CALC_API_ENDPOINT
 
   const [outputs, setOutputs] = useState({})
   const [isError, setIsError] = useState(false)
