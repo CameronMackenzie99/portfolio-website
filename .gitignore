@@ -4,7 +4,7 @@ jsconfig.json
 /node_modules
 /.pnp
 .pnp.js
-
+.env
 # testing
 /coverage
 
@@ -21,3 +21,6 @@ jsconfig.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local Netlify folder
+.netlify
