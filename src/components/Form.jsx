@@ -1,9 +1,20 @@
 import React, { useState } from 'react'
 
 export function Calculator() {
-  const restEndpoint = process.env.REACT_APP_CALC_API_ENDPOINT
+  const restEndpoint = '../.netlify/functions/callCalcApi'
 
-  const [outputs, setOutputs] = useState({})
+  const [outputs, setOutputs] = useState({
+    gross_pay: '',
+    national_insurance: '',
+    net_pay: '',
+    p20_tax_band: '',
+    p40_tax_band: '',
+    p45_tax_band: '',
+    stu_loan_payment: null,
+    tax_free_allowance: '',
+    total_tax_due: '',
+    total_taxable: '',
+  })
   const [isError, setIsError] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 

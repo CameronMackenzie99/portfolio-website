@@ -1,0 +1,4 @@
+[functions]
+    directory = "/src/functions/"
+    external_node_modules=["node-fetch"]
+
