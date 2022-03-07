@@ -23,3 +23,4 @@ Dynamic webpage for querying [take-home-pay-calculator](https://github.com/Camer
 - [x] Implement contact form
 - [ ] Write serverless CMS function for pulling blog posts from Notion
 - [ ] Implement transitions for dynamically rendered elements
+
