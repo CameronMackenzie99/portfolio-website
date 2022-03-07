@@ -14,7 +14,8 @@ export function Contact() {
         <div>
           <div className="md:grid md:grid-cols-2 md:gap-24">
             <div className="mt-5 md:mt-0 col-span-1">
-              <form name="contact-form" method="POST" netlify>
+              <form name="contact" method="POST">
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="shadow-lg rounded-md border border-white/5 sm:overflow-hidden">
                   <div className="px-4 py-5 bg-slate-300/50 dark:bg-slate-600/75 space-y-6 sm:p-6 ">
                     <div className="grid grid-cols-3 gap-6">
