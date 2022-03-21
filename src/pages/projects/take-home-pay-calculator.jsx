@@ -2,7 +2,7 @@ import { Calculator } from '../../components/Form'
 
 export function TakeHomePayCalculator() {
   return (
-    <div className="md:w-1/2 mx-auto">
+    <>
       <div className="px-2 py-4 flex flex-col justify-center items-center font-sans">
         <p className="text-emerald-500 font-semibold uppercase justify-self-center">
           Project
@@ -18,6 +18,6 @@ export function TakeHomePayCalculator() {
       <div className="py-4 gap-4 text-lg">
         <Calculator />
       </div>
-    </div>
+    </>
   )
 }

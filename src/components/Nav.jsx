@@ -28,30 +28,36 @@ function StoreActiveLink({ children, to }) {
 }
 export function Nav() {
   return (
-    <div>
-      <nav className="font-sans text-md">
-        <div className="flex justify-between max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <Link to="/">
-            <div className="flex grid grid-rows-2 w-16 text-2xl text-slate-900 dark:text-white font-bold font-mono items-center justify-center text-center tracking-widest ml-2">
-              <h2 className="grid-rows-1">Cameron</h2>
-              <h2 className="grid-rows-1">Mackenzie</h2>
-            </div>
-          </Link>
-          <div className="flex justify-center items-center">
-            <div className="hidden md:block">
-              <div className="flex items-baseline space-x-4 text-lg">
-                {navigation.map((item) => (
-                  <StoreActiveLink key={item.name} to={item.href}>
-                    {item.name}
-                  </StoreActiveLink>
-                ))}
-              </div>
+    <nav className="font-sans text-md">
+      <div className="grid grid-cols-3 max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+        <div className="md:hidden col-span-1 md:col-span-0 flex justify-start items-center">
+          menu
+        </div>
+        <Link
+          to="/"
+          className="col-span-1 flex justify-center md:justify-start"
+        >
+          <div className="flex grid grid-rows-2 text-xl text-slate-900 dark:text-white font-bold font-mono items-center text-center tracking-widest">
+            <h2 className="grid-rows-1">Cameron</h2>
+            <h2 className="grid-rows-1">Mackenzie</h2>
+          </div>
+        </Link>
+        <div className="justify-center items-center hidden md:flex md:col-span-1">
+          <div className="">
+            <div className="flex items-baseline space-x-4 text-lg">
+              {navigation.map((item) => (
+                <StoreActiveLink key={item.name} to={item.href}>
+                  {item.name}
+                </StoreActiveLink>
+              ))}
             </div>
           </div>
+        </div>
+        <div className="col-span-1 flex justify-end">
           <ThemeToggle />
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   )
 }
 

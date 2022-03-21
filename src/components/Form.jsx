@@ -56,10 +56,10 @@ export function Calculator() {
         {isError && 'Could not fetch data...'}
       </p>
       {isSubmitted && (
-        <div className="px-60">
+        <div className="px-4 flex justify-center">
           <div
             data-testid="calcResult"
-            className="flex grid bg-slate-300/50 dark:bg-slate-600/75 grid-rows-9 w-full text-xl shadow-lg rounded-md border border-white/5 font-mono text-center py-6 max-w-20"
+            className="grid bg-slate-300/50 dark:bg-slate-600/75 grid-rows-9 text-xl shadow-lg rounded-md border border-white/5 font-mono text-center py-6 px-4"
           >
             {[
               ['Gross Salary', outputs.gross_pay],
@@ -101,51 +101,60 @@ function CalculatorForm({ handleSubmit }) {
   }
 
   return (
-    <form className="" onSubmit={handleSubmit}>
-      <div className="mb-4 mt-4 px-60">
-        <label
-          htmlFor="salary"
-          className="mt-1 inline-block text-lg font-semibold"
-        >
-          Salary
-          <div className="border border-white/5 rounded-md bg-slate-300/50 dark:bg-slate-600/75 px-2 mt-1 shadow-lg hover:dark:bg-slate-600">
-            <span className="font-bold text-md mr-1 bg-slate-300/50 dark:bg-slate-600/75">
-              £
-            </span>
-            <input
-              type="text"
-              name="salary"
-              value={inputs.salary}
-              onChange={handleChange}
-              placeholder="25971"
-              className="bg-transparent border-0 rounded-md w-20"
-              autoComplete="off"
-              required
-            />
-          </div>
-        </label>
-      </div>
-      <div className="mt-4 mb-4 px-60">
-        <label htmlFor="taxYear" className="block text-lg font-semibold">
-          Tax Year
-        </label>
-        <div className="flex flex-row flex-auto justify-between">
-          <select
-            name="taxYear"
-            value={inputs.taxYear}
-            onChange={handleChange}
-            className="border border-white/5 rounded-md py-1 shadow-lg mt-1 inline-block bg-slate-300/50 dark:bg-slate-600/75 hover:ring-1 hover:ring-emerald-500 h-10"
+    <div className="mb-4 mt-4 px-4">
+      <form className="" onSubmit={handleSubmit}>
+        <div className="justify-center sm:justify-start flex">
+          <label
+            htmlFor="salary"
+            className="mt-1 inline-block text-lg font-semibold text-center sm:text-left"
           >
-            <option value="2021/22">2021/22</option>
-            <option value="2020/21">2020/21</option>
-          </select>
-          <input
-            type="submit"
-            className="border border-white/5 rounded-md px-2 py-1 shadow-lg mt-1 inline-block bg-emerald-500/75 dark:bg-slate-600/75 font-bold hover:-translate-y-1 transition ease-in-out hover:ring-1 hover:ring-emerald-500"
-            data-testid="submit-button"
-          />
+            Salary
+            <div className="flex items-center border border-white/5 rounded-md bg-slate-300/50 dark:bg-slate-600/75 px-2 mt-1 shadow-lg hover:dark:bg-slate-600">
+              <span className="font-bold text-md mr-1 bg-slate-300/50 dark:bg-slate-600/75">
+                £
+              </span>
+              <input
+                type="text"
+                name="salary"
+                value={inputs.salary}
+                onChange={handleChange}
+                placeholder="25971"
+                className="bg-transparent border-0 rounded-md w-20"
+                autoComplete="off"
+                required
+              />
+            </div>
+          </label>
         </div>
-      </div>
-    </form>
+        <div className="my-4">
+          <div className="sm:flex sm:flex-wrap sm:justify-between">
+            <div className="flex justify-center mb-8 sm:mb-0">
+              <label
+                htmlFor="taxYear"
+                className="inline-block text-center sm:text-left text-lg font-semibold"
+              >
+                Tax Year
+                <select
+                  name="taxYear"
+                  value={inputs.taxYear}
+                  onChange={handleChange}
+                  className="border border-white/5 rounded-md py-1 shadow-lg mt-1 bg-slate-300/50 dark:bg-slate-600/75 hover:ring-1 hover:ring-emerald-500 h-10 flex"
+                >
+                  <option value="2021/22">2021/22</option>
+                  <option value="2020/21">2020/21</option>
+                </select>
+              </label>
+            </div>
+            <div className="flex justify-center items-end">
+              <input
+                type="submit"
+                className="border border-white/5 rounded-md px-2 py-1 shadow-lg mt-1 bg-emerald-500/75 dark:bg-slate-600/75 font-bold hover:-translate-y-1 transition ease-in-out hover:ring-1 hover:ring-emerald-500"
+                data-testid="submit-button"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   )
 }

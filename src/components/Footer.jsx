@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <div className="flex justify-center items-center sticky top-[100vh] border-t border-slate-700/20 dark:border-slate-300/10 md:w-1/2 mx-4 md:mx-auto gap-6">
+    <div className="flex justify-center items-center sticky top-[100vh] border-t border-slate-700/20 dark:border-slate-300/10 mx-4 md:mx-auto gap-6">
       <p className="py-4">© 2022 Cameron Mackenzie</p>
       <div className="flex flex-wrap -mx-4 overflow-hidden">
         <a

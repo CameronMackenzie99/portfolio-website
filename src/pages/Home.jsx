@@ -1,15 +1,17 @@
-import CV from '../assets/CameronMackenzie_CV.pdf'
+// import CV from '../assets/CameronMackenzie_CV.pdf'
 import landscape from '../assets/landscape1.jpg'
 
 export function Home() {
   return (
-    <div className="md:w-1/2 mx-auto">
-      <div className="px-2 py-10 flex flex-col font-sans text-slate-800 dark:text-white">
-        <div className="py-10 grid grid-cols-3 grid-flow-col gap-4 font-sans">
-          <p className="font-bold text-5xl tracking-wide col-span-2">
-            Hi, I&apos;m Cameron Mackenzie, an aspiring software developer.
-          </p>
-          <div className="flex items-center justify-center">
+    <div className="">
+      <div className="px-4 py-10 flex flex-col font-sans text-slate-800 dark:text-white">
+        <div className="py-10 flex flex-wrap font-sans gap-6">
+          <div className="flex items-center md:basis-1/2">
+            <p className="font-bold text-4xl lg:text-5xl tracking-wide">
+              Hi, I&apos;m Cameron Mackenzie, an aspiring software developer.
+            </p>
+          </div>
+          {/* <div className="flex items-center justify-center">
             <a
               href={CV}
               target="_blank"
@@ -19,17 +21,23 @@ export function Home() {
                 See my CV
               </span>
             </a>
+          </div> */}
+          <div className="flex justify-center py-2 basis-1/4 md:basis-1/4 grow">
+            <img
+              className="rounded-md shadow-lg object-cover md:object-right"
+              src={landscape}
+              alt="Me standing on Stannage Edge with arms out holding a map"
+            />
+          </div>
+          <div className="flex justify-center items-center basis-2/5 grow py-2">
+            <h2 className="text-3xl">
+              A self-motivated, fast learner working on personal projects to
+              develop my coding skills.
+            </h2>
           </div>
         </div>
-        <h2 className="text-3xl pb-10">
-          A self-motivated, fast learner working on personal projects to develop
-          my coding skills.
-        </h2>
-        <div className="flex pt-5 gap-x-10">
-          <div className="w-2/5">
-            <img className="rounded-md shadow-lg" src={landscape} alt="" />
-          </div>
-          <p className="w-3/5 text-xl text-left">
+        <div className="gap-x-10">
+          <p className="text-xl text-left">
             I have always loved technology, and became interested in software
             development during my Master&apos;s project in computational
             chemistry in the first half of 2021. I started self-directed
